@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+  
+  .banner{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/58/55/765869005a81084.jpg);
+    width:900px;
+    height:150px;
+    text-align:center;
+    background-position:center;
+    padding:12px;
+   }
+  
+  button{
+    background-color: pink;
+    padding: 0px 25px;
+    border-radius: 25ch;
+    height: 40px;
+  }
