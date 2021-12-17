@@ -1,0 +1,40 @@
+module.exports = {
+    curso: {
+        nomeCurso: 'programação interativa',
+        aprovacao: 5,
+        limiteFaltas: 4,
+        listaAlunos: [],
+        adcionarEstudante: function (estudante) {
+            this.listaAlunos.push(estudante);
+        },
+
+       
+        resultado: function (aluno){
+
+            let media = aluno.calcularMedia();
+            let resultado;
+
+ 
+            if (aluno.faltas < this.limiteFaltas && media >= this.aprovacao) {
+                resultado = console.log(aluno.nome + " Aprovado" );
+
+            } else if(aluno.faltas === this.limiteFaltas && media > (this.aprovacao * 1.1)){   
+                resultado = console.log(aluno.nome + " alcançou o máximo de faltas, mas foi aprovado pela média." );
+
+            } else {
+                resultado = console.log( aluno.nome + " Reprovado" );
+                
+            }
+            return resultado;
+        },
+
+     
+        listaResultado: function(){
+            let resultadoFinal= [];
+            for (let i = 0; i < this.listaAlunos.length; i++) {
+               resultadoFinal.push(this.resultado(this.listaAlunos[i]));
+            }
+            return resultadoFinal;
+        }
+    }
+}
