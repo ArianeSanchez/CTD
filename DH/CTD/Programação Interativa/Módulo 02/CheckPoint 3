@@ -4,7 +4,7 @@ function Aluno(nome, faltas, notas){
   this.nome = nome;
   this.faltas = faltas;
   this.notas = notas;
-
+}
   this.faltou = function(){
       this.faltas +=1;
   console.log(this.nome + ' está com ' + faltas + ' faltas');
