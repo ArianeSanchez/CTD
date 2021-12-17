@@ -1,0 +1,39 @@
+let curso = require('./curso');
+
+function Aluno(nome, faltas, notas){
+  this.nome = nome;
+  this.faltas = faltas;
+  this.notas = notas;
+
+  this.faltou = function(){
+      this.faltas +=1;
+  console.log(this.nome + ' está com ' + faltas + ' faltas');
+}   
+
+    this.calcularMedia = function(){
+    let somaNota = 0;
+        
+      for(let i=0; i <this.notas.length; i++){
+         somaNota += this.notas[i];   
+      }
+ console.log(this.nome + 'sua média é: ' + somaNota / this.notas.length);
+         return somaNota / this.notas.length;
+    }
+
+let aluno1 = new Aluno("Ariane", 2, [5, 5, 7, 6, 5]);
+let aluno2 = new Aluno("Pedro", 2, [7, 5, 7, 6, 5]);
+let aluno3 = new Aluno("Paçoca", 2, [8, 9, 5, 7, 4]);
+let aluno4 = new Aluno("Pipoca", 2, [7, 5, 8, 6, 9]);
+let aluno5 = new Aluno("Panqueca", 2, [8, 7, 9, 5, 4]);
+let aluno6 = new Aluno("Fabão", 2, [6, 9, 5, 8, 5]);
+
+
+console.log(curso);
+
+curso.curso.adcionarEstudante(aluno1); 
+curso.curso.adcionarEstudante(aluno2);
+curso.curso.adcionarEstudante(aluno3);
+curso.curso.adcionarEstudante(aluno4);
+curso.curso.adcionarEstudante(aluno5);
+curso.curso.adcionarEstudante(aluno6);
+curso.curso.listaResultado();
